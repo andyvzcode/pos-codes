@@ -23,15 +23,15 @@ services:
     ports:
       - "90:8000"
 
-  process_file_service:
-    build:
-      context: ./process_file_service
-      dockerfile: Dockerfile
-    volumes:
-      - "./process_file_service:/code"
-    restart: on-failure
-    env_file: ./.env
-    depends_on:
-      - db
-    ports:
-      - "91:8001"
+  # process_file_service:
+  #   build:
+  #     context: ./process_file_service
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - "./process_file_service:/code"
+  #   restart: on-failure
+  #   env_file: ./.env
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "91:8001"

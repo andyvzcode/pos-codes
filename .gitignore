@@ -1,1 +1,19 @@
+### Django ###
+*.log
+*.pot
 *.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+*/*.pyc
+*/files/
+*/*.pyc
+*/*/*.pyc
+*.pyc
+*/*/__pycache__/
+*/__pycache__/
+celerybeat.pid
+celerybeat-schedule
+.DS_store
