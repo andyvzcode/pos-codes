@@ -20,6 +20,8 @@ services:
     env_file: ./.env
     depends_on:
       - db
+    ports:
+      - "90:8000"
 
   process_file_service:
     build:
@@ -31,3 +33,5 @@ services:
     env_file: ./.env
     depends_on:
       - db
+    ports:
+      - "91:8001"
