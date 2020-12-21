@@ -1,16 +1,11 @@
-FROM python:3.6
+FROM python:3.8
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get install -y \
-  binutils \
-  gdal-bin \
-  python3-gdal \
-  libproj-dev
+RUN apt-get update && apt-get install
 RUN mkdir /code
 WORKDIR /code
-COPY /requierements/base.txt /code/
-COPY /requierements/development.txt /code/
-RUN pip install -r development.txt
+COPY requirements.txt /code/
+RUN pip install -r requirements.txt
 COPY . /code/
 EXPOSE 8000
 RUN chmod +x /code/start.sh
